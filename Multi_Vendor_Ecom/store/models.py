@@ -25,8 +25,8 @@ class Product(models.Model):
         (DELETED,'Deleted')
     )
 
-    user = models.ForeignKey(User, related_name='products', on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, related_name='products',on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='product', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='product',on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     slug = models.SlugField(max_length=50)
     description = models.TextField(blank=True)
